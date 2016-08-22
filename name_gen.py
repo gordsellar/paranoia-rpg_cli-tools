@@ -26,11 +26,16 @@ get_name = file.readlines(fopen)
 def rando_letter(size=1, chars=string.ascii_uppercase):
 	return ''.join(random.choice(chars) for _ in range(size))
 
-# Pick 3 alpha-numeric characters
-def rando_sector(size=3, chars=string.ascii_uppercase + string.digits):
+# Pick 3 more letters 
+def rando_sector(size=3, chars=string.ascii_uppercase):
 	return ''.join(random.choice(chars) for _ in range(size))
 
+# Finally, pick a number
+def rando_num(size=1, chars=string.digits):
+	return ''.join(random.choice(chars) for _ in range(size))
+
+
 # Combine and print the name
-print random.choice(get_name).strip() + "-" + rando_letter() + "-" + rando_sector()
+print random.choice(get_name).strip() + "-" + rando_letter() + "-" + rando_sector() + "-" + rando_num()
 
 fopen.close()
