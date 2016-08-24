@@ -3,7 +3,7 @@ This is a small python script to generate names for the Paranoia RPG by Mongoose
 
 To run it simply do:
 
-	python name_gen.py
+	python generator.py
 
 TADA!
 
